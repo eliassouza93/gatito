@@ -1,12 +1,21 @@
 import react from 'react-native'
 import { TextInput } from 'react-native'
-export default function CampoInteiro({ valor, acao }) {
+import estilosPadrao from './estilos'
+export default function CampoInteiro({ valor, acao, estilos }) {
 
+    const atualiza = (novoValor, acaoRetorno) => {
+        const verificaInteiro = novoValor.match(/^[0-9]*$/)
+        if (!verificaInteiro) return
+
+        const removeZeroEsquerda = novoValor.replace(/^(0)(.)/, '$2')
+        acaoRetorno(removeZeroEsquerda)
+    }
     const numeroEmTexto = String(valor)//muda numero para texto no input
     return <TextInput
+        style={[estilosPadrao.campo, estilos]}
         keyboardType='number-pad'
         selectTextOnFocus
-        onChangeText={(novoValor) => { acao(novoValor) }}
+        onChangeText={(novoValor) => { atualiza(novoValor, acao) }}
         value={numeroEmTexto}
     />
 }
