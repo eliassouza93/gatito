@@ -7,5 +7,6 @@ export default StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
         textAlign: 'center',
+        color:'#333'
     }
 });
