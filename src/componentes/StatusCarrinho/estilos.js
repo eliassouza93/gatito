@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { cores } from '../../estilos';
+
 
 export default StyleSheet.create({
   conteudo: {
-    backgroundColor: cores.roxo,
+    backgroundColor: '#993399',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -12,20 +12,23 @@ export default StyleSheet.create({
   },
   total: {
     alignItems: 'center',
+    color: '#FFFF00',
   },
   descricao: {
     fontSize: 16,
-    color: cores.claro,
     fontWeight: 'bold',
+    color: '#fff',
   },
   valor: {
     fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 6,
-    color: cores.laranja,
+  
+
   },
   botao: {
     flexGrow: 1,
     alignItems: 'flex-end',
+
   },
 });
