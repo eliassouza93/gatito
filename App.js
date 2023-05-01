@@ -1,11 +1,17 @@
- 
-import Servicos from './src/telas/Servicos';
+
+
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR'
-import Carrinho from './src/telas/Carrinho';
+import TelaPadrao from './src/componentes/TelaPadrao';
+import Rotas from './src/Rotas';
+
+
+
 
 export default function App() {
-  return <Carrinho/>
+
+  return  <Rotas />
+  
 
 
 }

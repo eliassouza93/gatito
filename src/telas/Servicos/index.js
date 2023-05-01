@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native'
 import Item from './Item';
-import TelaPadrao from '../../componentes/TelaPadrao';
+
 
 const servicos = [
     {
@@ -26,7 +26,7 @@ const servicos = [
 
 export default function Servicos() {
     return (
-        <TelaPadrao  >
+        <  >
             <FlatList
                 data={servicos}
                 removeClippedSubviews={false}
@@ -34,7 +34,7 @@ export default function Servicos() {
                 keyExtractor={(titulo) => titulo.id}
             />
 
-        </TelaPadrao>
+        </>
     )
 
 }
